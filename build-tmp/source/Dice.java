@@ -14,6 +14,7 @@ import java.io.IOException;
 
 public class Dice extends PApplet {
 
+//initialize var for total
 int sum = 0;
 
 public void setup() {
@@ -39,6 +40,7 @@ public void mousePressed() {
     redraw();
     sum = 0;
 }
+
 class Die //models one single dice cube
 {
     int roll;
