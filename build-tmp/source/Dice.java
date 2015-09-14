@@ -29,11 +29,11 @@ public void draw() {
             Die p = new Die(i, y);
             p.show();
             p.roll();
-            sum = sum + p.roll;
+            sum = sum + p.num;
         }
     }
     fill(255);
-    text("Total: " + sum, 300, 785);
+    text("Total: " + sum, 340, 785);
 }
 
 public void mousePressed() {
@@ -43,43 +43,43 @@ public void mousePressed() {
 
 class Die //models one single dice cube
 {
-    int roll;
+    int num;
     int value;
     int myX, myY;
     Die(int x, int y) //constructor
         {
-            roll = (int)(Math.random() * 6) + 1;
+            num = (int)(Math.random() * 6) + 1;
             myX = x;
             myY = y;
         }
 
     public void roll() {
-        if (roll == 1) {
+        if (num == 1) {
             fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
             ellipse(myX + 25, myY + 25, 10, 10);
-        } else if (roll == 2) {
+        } else if (num == 2) {
             fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
             ellipse(myX + 15, myY + 15, 10, 10);
             ellipse(myX + 35, myY + 35, 10, 10);
-        } else if (roll == 3) {
+        } else if (num == 3) {
             fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
             ellipse(myX + 15, myY + 15, 10, 10);
             ellipse(myX + 25, myY + 25, 10, 10);
             ellipse(myX + 35, myY + 35, 10, 10);
-        } else if (roll == 4) {
+        } else if (num == 4) {
             fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
             ellipse(myX + 15, myY + 15, 10, 10);
             ellipse(myX + 35, myY + 15, 10, 10);
             ellipse(myX + 15, myY + 35, 10, 10);
             ellipse(myX + 35, myY + 35, 10, 10);
-        } else if (roll == 5) {
+        } else if (num == 5) {
             fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
             ellipse(myX + 15, myY + 15, 10, 10);
             ellipse(myX + 35, myY + 15, 10, 10);
             ellipse(myX + 25, myY + 25, 10, 10);
             ellipse(myX + 15, myY + 35, 10, 10);
             ellipse(myX + 35, myY + 35, 10, 10);
-        } else if (roll == 6) {
+        } else if (num == 6) {
             fill((int)(Math.random() * 255), (int)(Math.random() * 255), (int)(Math.random() * 255));
             ellipse(myX + 15, myY + 15, 9, 9);
             ellipse(myX + 15, myY + 25, 9, 9);
